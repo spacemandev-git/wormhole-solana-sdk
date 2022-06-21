@@ -1,0 +1,30 @@
+[package]
+name = "wormhole-solana-sdk"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anchor-lang = "0.24.2"
+sha3 = "0.10.1"
+byteorder = "1.4.3"
+borsh = "0.9.3"
+hex = "0.4.3"
+
+[features]
+default = ["core", "token", "nft", "devnet"]
+
+#Wormhole Core Bridge Methods
+core = []
+#Wormhole Token Bridge Methods
+token = []
+#Wormhole NFT Bridge Methods
+nft = []
+
+# Helper methods will target the Wormhole mainnet contract addresses.
+mainnet   = []
+# Helper methosd will target the Wormhole testnet contract addresses.
+testnet    = []
+# Helper methosd will target the Wormhole devnet contract addresses.
+devnet    = []
